@@ -40,6 +40,7 @@ ytm-shorts-lockup-view-model {
 
 /* --- Sidebar navigation: Shorts link --- */
 ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-guide-entry-renderer:has(path[d^="m13.467 1.19-8 4.7"]),
 ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]) {
   display: none !important;
 }

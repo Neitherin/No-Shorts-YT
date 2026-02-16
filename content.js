@@ -16,6 +16,7 @@ const SHORTS_SELECTORS = [
   'ytm-shorts-lockup-view-model',
   // Sidebar
   'ytd-guide-entry-renderer:has(a[href^="/shorts"])',
+  'ytd-guide-entry-renderer:has(path[d^="m13.467 1.19-8 4.7"])',
   'ytd-mini-guide-entry-renderer:has(a[href^="/shorts"])',
   // Channel tabs
   'tp-yt-paper-tab:has(a[href*="/shorts/"])',
