@@ -39,16 +39,15 @@ ytm-shorts-lockup-view-model {
 }
 
 /* --- Sidebar navigation: Shorts link --- */
-ytd-guide-entry-renderer:has(a[title="Shorts"]),
-ytd-mini-guide-entry-renderer[aria-label="Shorts"],
-ytd-mini-guide-entry-renderer:has(a[title="Shorts"]) {
+ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]) {
   display: none !important;
 }
 
 /* --- Channel pages: Shorts tab --- */
-tp-yt-paper-tab:has(yt-formatted-string[title="Shorts"]),
-yt-tab-shape[tab-title="Shorts"],
-yt-chip-cloud-chip-renderer:has(yt-formatted-string[title="Shorts"]) {
+tp-yt-paper-tab:has(a[href*="/shorts/"]),
+yt-tab-shape:has(a[href*="/shorts/"]),
+yt-chip-cloud-chip-renderer:has(a[href*="/shorts/"]) {
   display: none !important;
 }
 

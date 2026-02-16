@@ -7,11 +7,17 @@
     "declarativeNetRequest"
   ],
   "host_permissions": [
-    "*://www.youtube.com/*"
+    "*://youtube.com/*",
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/*"],
+      "matches": [
+        "*://youtube.com/*",
+        "*://www.youtube.com/*",
+        "*://m.youtube.com/*"
+      ],
       "css": ["content.css"],
       "js": ["content.js"],
       "run_at": "document_start"
