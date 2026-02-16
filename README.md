@@ -57,6 +57,13 @@ ytd-search ytd-item-section-renderer:has(ytd-reel-shelf-renderer) {
 
 This extension runs locally on your browser. It does not collect, store, or transmit any user data. It only interacts with `youtube.com`.
 
+## Version History
+
+-   **v1.0.3**: Fixed "Shorts" button visibility in expanded sidebar using robust SVG selector.
+-   **v1.0.2**: Initial attempt to fix sidebar button (missing legacy support).
+-   **v1.0.1**: Performance hardening and language-agnostic selectors.
+-   **v1.0.0**: Initial Release.
+
 ## License
 
 MIT
