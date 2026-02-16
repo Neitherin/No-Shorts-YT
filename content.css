@@ -1,0 +1,89 @@
+/* ============================================================
+   No Shorts YT - CSS Layer
+   Hides all YouTube Shorts elements before JS even loads.
+   Injected at document_start for zero flicker.
+   ============================================================ */
+
+/* --- CORE: Non-destructive hiding --- */
+/* Used by content.js to hide elements without removing them from DOM */
+[is-hidden-short] {
+  display: none !important;
+}
+
+/* --- Homepage: Shorts shelf --- */
+ytd-rich-shelf-renderer[is-shorts],
+ytd-rich-shelf-renderer[is-shorts]+ytd-rich-shelf-renderer,
+ytd-reel-shelf-renderer,
+/* Modern Home/Search Shelves */
+grid-shelf-view-model:has(a[href*="/shorts/"]),
+yt-horizontal-list-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* --- Homepage: Shorts items in grid --- */
+ytd-rich-item-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* --- Search results: Shorts shelf --- */
+ytd-reel-shelf-renderer,
+ytd-search ytd-item-section-renderer:has(ytd-reel-shelf-renderer) {
+  display: none !important;
+}
+
+/* --- Search results: individual Shorts --- */
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytm-shorts-lockup-view-model-v2,
+ytm-shorts-lockup-view-model {
+  display: none !important;
+}
+
+/* --- Sidebar navigation: Shorts link --- */
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-mini-guide-entry-renderer:has(a[title="Shorts"]) {
+  display: none !important;
+}
+
+/* --- Channel pages: Shorts tab --- */
+tp-yt-paper-tab:has(yt-formatted-string[title="Shorts"]),
+yt-tab-shape[tab-title="Shorts"],
+yt-chip-cloud-chip-renderer:has(yt-formatted-string[title="Shorts"]) {
+  display: none !important;
+}
+
+/* --- Channel pages: Shorts shelf/section --- */
+ytd-channel-featured-content-renderer:has(a[href*="/shorts/"]),
+ytd-shelf-renderer:has(a[href*="/shorts/"]),
+ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* --- Recommendations / Up Next sidebar --- */
+ytd-compact-video-renderer:has(a[href*="/shorts/"]),
+ytd-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* --- Notification menu: Shorts --- */
+ytd-notification-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* --- Shorts badge on thumbnails --- */
+ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"] {
+  display: none !important;
+}
+
+/* --- Subscriptions page: Shorts --- */
+ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+ytd-rich-item-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* --- Shorts player page (fallback if redirect didn't fire) --- */
+ytd-shorts,
+ytd-reel-video-renderer,
+#shorts-container {
+  display: none !important;
+}
