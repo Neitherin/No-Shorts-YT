@@ -39,8 +39,11 @@ ytm-shorts-lockup-view-model {
 }
 
 /* --- Sidebar navigation: Shorts link --- */
+/* Expanded Sidebar: Shorts (SVG path "contains" match for safety) */
+ytd-guide-entry-renderer:has(path[d*="m13.467 1.19-8 4.7"]),
+/* Fallback: Title based (works for English and many locales) */
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
 ytd-guide-entry-renderer:has(a[href^="/shorts"]),
-ytd-guide-entry-renderer:has(path[d^="m13.467 1.19-8 4.7"]),
 ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]) {
   display: none !important;
 }
